@@ -1,0 +1,83 @@
+.poke-swipe {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+}
+
+.pokemon-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  text-transform: uppercase;
+  line-height: 1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.pokemon-card img {
+  width: 150px;
+  height: 150px;
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-background: #f4f4f4;
+  --button-background: #ffcc00;
+  --button-hover-background: #ffdd00;
+  --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+body[data-theme='dark'] {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-background: #333333;
+  --button-background: #ffaa00;
+  --button-hover-background: #ffbb00;
+  --box-shadow: rgba(255, 255, 255, 0.1) 0px 50px 100px -20px, rgba(255, 255, 255, 0.05) 0px 30px 60px -30px, rgba(255, 255, 255, 0.05) 0px -2px 6px 0px inset;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.pokemon-card {
+  background: var(--card-background);
+  box-shadow: var(--box-shadow);
+}
+
+button {
+  background-color: var(--button-background);
+}
+
+button:hover {
+  background-color: var(--button-hover-background);
+}

@@ -1,0 +1,91 @@
+.pokemon-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    text-transform: uppercase;
+    line-height: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 20px;
+    text-align: center;
+    /* color: rgb(0, 0, 0); */
+    font-size: 1.5em;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+    transform-origin: center;
+}
+
+.card:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 60px 120px -20px,
+        rgba(0, 0, 0, 0.4) 0px 40px 80px -30px,
+        rgba(10, 37, 64, 0.45) 0px -2px 10px 0px inset;
+    background: linear-gradient(135deg, #ff6b6b, #ffd56b);
+    z-index: 1;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --card-background: #f4f4f4;
+    --button-background: #ffcc00;
+    --button-hover-background: #ffdd00;
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+body[data-theme='dark'] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-background: #333333;
+    --button-background: #ffaa00;
+    --button-hover-background: #ffbb00;
+    --box-shadow: rgba(255, 255, 255, 0.1) 0px 50px 100px -20px, rgba(255, 255, 255, 0.05) 0px 30px 60px -30px, rgba(255, 255, 255, 0.05) 0px -2px 6px 0px inset;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.pokemon-card {
+    background: var(--card-background);
+    box-shadow: var(--box-shadow);
+}
+
+button {
+    background-color: var(--button-background);
+}
+
+button:hover {
+    background-color: var(--button-hover-background);
+}

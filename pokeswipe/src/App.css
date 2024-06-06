@@ -1,0 +1,194 @@
+* {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.welcome,
+.poke-swipe,
+.liked-pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Welcome-message {
+    transition: transform 0.3s;
+}
+
+.Welcome-message:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 10px;
+}
+
+.toggle-button {
+    position: fixed;
+    background-color: rgb(190, 190, 190);
+    color: white;
+    border-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    z-index: 1000000;
+}
+
+.pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    background: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 330px;
+    width: 100%;
+    max-width: 30%;
+    text-transform: uppercase;
+    line-height: 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.pokemon-card img {
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffcc00;
+    transition: background-color 0.3s;
+}
+
+.letsgo-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.letsgo-button:hover {
+    animation: shake 0.5s infinite alternate;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-5px, -5px);
+    }
+
+    50% {
+        transform: translate(5px, 5px);
+    }
+
+    75% {
+        transform: translate(-5px, 5px);
+    }
+
+    100% {
+        transform: translate(5px, -5px);
+    }
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li img {
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width: 600px) {
+    .pokemon-card {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 900px) {
+    .pokemon-card {
+        max-width: 700px;
+    }
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --card-background: #f4f4f4;
+    --button-background: #ffcc00;
+    --button-hover-background: #ffdd00;
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+body[data-theme='dark'] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-background: #333333;
+    --button-background: #ffaa00;
+    --button-hover-background: #ffbb00;
+    --box-shadow: rgba(255, 255, 255, 0.1) 0px 50px 100px -20px, rgba(255, 255, 255, 0.05) 0px 30px 60px -30px, rgba(255, 255, 255, 0.05) 0px -2px 6px 0px inset;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.pokemon-card {
+    background: var(--card-background);
+    box-shadow: var(--box-shadow);
+}
+
+button {
+    background-color: var(--button-background);
+}
+
+button:hover {
+    background-color: var(--button-hover-background);
+}
